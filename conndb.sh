@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 function usage () {
    echo "Usage: $0 [-u <string>][-h <string>][-p <3306>]" 1>&2; exit 1;
@@ -9,16 +9,14 @@ while getopts ":u:h:p" o; do
     case "${o}" in
         u)
             USER=${OPTARG}
-            u=${OPTARG}
             ;;
 			
         h)
             HOST=${OPTARG}
-            h=${OPTARG}
             ;;
         p)  
-            PORT=${OPTARG}
             p=${OPTARG}
+	    PORT=p
             if [ $p -ne 3306 ]
             then
 				echo "Port 3306"
@@ -44,8 +42,7 @@ then
  echo "Please give u, h and p values"
 fi
 
-echo "p = ${p}"
-echo "h = ${h}"
+
 echo "USER = ${USER}"
 echo "HOST = ${HOST}"
 echo "PORT = ${PORT}"
