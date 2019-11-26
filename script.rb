@@ -4,5 +4,6 @@ Vagrant.configure("2") do |config|
        nodo0.vm.hostname = "master"
        nodo0.vm.network "public_network", ip: "192.168.1.68"
        nodo0.vm.network "public_network", ip: "192.168.207.166"
-     endL
+     end
+     config.vm.provision "shell", path: "script_ext.sh"
 end
