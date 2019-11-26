@@ -5,19 +5,19 @@ function usage () {
 }
 
 while getopts ":u:h:p" o; do
-    #echo "OPTIND: ${OPTIND}"
+    
     case "${o}" in
         u)
-            USER=${OPTARG}
+            u=${OPTARG}
             ;;
 			
         h)
-            HOST=${OPTARG}
+            h=${OPTARG}
             ;;
         p)  
             p=${OPTARG}
-	    PORT=p
-            if [ $p -ne 3306 ]
+
+            if [$p -ne 3306]
             then
 				echo "Port 3306"
 				usage
@@ -38,11 +38,12 @@ done
 # Check required switches exist
 if [ -z "${u}" ] || [ -z "${h}" ] || [-z "${p}"]
 then
- usage
- echo "Please give u, h and p values"
+	echo "Please give u, h and p values"
+	usage
+ 
 fi
 
 
-echo "USER = ${USER}"
-echo "HOST = ${HOST}"
-echo "PORT = ${PORT}"
+echo "USER = ${u}"
+echo "HOST = ${h}"
+echo "PORT = ${p}"
