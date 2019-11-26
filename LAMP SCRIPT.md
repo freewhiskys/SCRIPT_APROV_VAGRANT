@@ -41,4 +41,4 @@ Mysql:
 PHP:
 ```
   - sudo systemctl status php
-```
+``` 
