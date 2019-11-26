@@ -14,10 +14,12 @@ while getopts ":u:h:p" o; do
         h)
             h=${OPTARG}
             ;;
+
         p)  
             p=${OPTARG}
+			PORT=$p
 
-            if [$p -ne 3306]
+            if [ $PORT -ne 3306 ]
             then
 				echo "Port 3306"
 				usage
@@ -36,7 +38,7 @@ while getopts ":u:h:p" o; do
 done
 
 # Check required switches exist
-if [ -z "${u}" ] || [ -z "${h}" ] || [-z "${p}"]
+if [ -z $u ] || [ -z $h ] || [-z $p]
 then
 	echo "Please give u, h and p values"
 	usage
