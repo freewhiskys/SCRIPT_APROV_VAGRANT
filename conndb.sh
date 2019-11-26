@@ -1,7 +1,5 @@
 #!/bin/sh
 
-nomscript=$0   # $0 es el nom del programa
-
 function usage () {
    echo "Usage: $0 [-u <string>][-h <string>][-p <3306>]" 1>&2; exit 1;
 }
@@ -36,8 +34,7 @@ while getopts ":u:h:p" o; do
             usage
             ;;
     esac
-	#shift $((OPTIND-1))
-	#printf "Remaining arguments are: %s\n" "$*"
+	
 done
 
 # Check required switches exist
@@ -52,4 +49,3 @@ echo "h = ${h}"
 echo "USER = ${USER}"
 echo "HOST = ${HOST}"
 echo "PORT = ${PORT}"
-echo ${f}
