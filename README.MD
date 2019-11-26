@@ -1,3 +1,5 @@
+El script vagrant_script.rb es un vagrant file que llama a el script_ex1.sh.
+
 El script script_ex1.sh instala los programas apache2, mysql-server, php y adminer al ejecutar el vagrant file.
 Todos los programas se instalan de forma silenciosa.
 
