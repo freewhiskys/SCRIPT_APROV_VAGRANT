@@ -6,4 +6,11 @@ Todos los programas se instalan de forma silenciosa.
 El script conndb.sh comprueba que le passes tres variables y los parametros tienen el formato configurado.
 (Usuario, host y puerto que tiene que ser 3306)
 
-script creado por Sergi Ramos y Miguel Martínez.
+El fichero gravacio_terminal es una grabación del terminal con el programa asciinema, para reproducirla tienes que seguir los siguientes pasos:
+
+- sudo apt-add-repository ppa:zanchey/asciinema
+- sudo apt-get update
+- sudo apt-get install asciinema
+- asciinema play gravacio_terminal
+
+Scripts creados por Sergi Ramos y Miguel Martínez.
